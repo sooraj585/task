@@ -1,0 +1,19 @@
+#include<stdio.h>
+void main() {
+int word=0,inword=0,c;
+while((c=getchar()) !=EOF)
+    {
+        if ((c>='a' && c <='z') || (c>= 'A' && c<='Z') )
+                inword=1; 
+        if (inword==1 &&(c>='a' && c <='z') || (c>= 'A' && c<='Z') )
+                continue; 
+        if(inword==1 &&(c==' ' || c=='\t' || c=='.' || c==',' || c==';' ) )
+                { inword=0;
+                  word++;   }           
+        if(inword==0 && (c>='a' && c <='z') || (c>= 'A' && c<='Z'))
+                inword=1;
+        if (inword==0 && (c==' ' || c=='\t' || c=='.' || c==',' || c==';' ) )
+                continue;    
+     }
+   printf("%d",word);
+ }
