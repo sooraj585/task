@@ -1,0 +1,27 @@
+#include<stdio.h>
+int find_even(int);
+void main() {
+        int k,op=0;
+        scanf("%d",&k);
+        op=find_even(k);
+        printf("%d",op);
+}
+
+
+int find_even(int k) {
+        int n,res=-1;
+        
+        while(1) {
+                scanf("%d",&n);
+                if(n==-1)
+              {  
+                break;}
+                else if(n%2==0)
+               { k--;
+               if(k==0)
+             res=n;   }
+         
+        }
+        return res;
+        
+}
