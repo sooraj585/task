@@ -1,0 +1,23 @@
+#include<stdio.h>
+int fact(int n);
+void main () {
+        int n,i,res=0;
+        scanf("%d",&n);
+        for(i=1;i<=n;i++)
+        {
+                res=fact(i);
+                if(res<=n)
+                        printf("%d ",res);
+          if(res>n)
+                break;
+        }
+}
+
+int fact(int k) {
+        int fact=1,i;
+        for(i=1;i<=k;i++)
+        {
+                fact=fact*i;
+        }
+        return fact;
+}
